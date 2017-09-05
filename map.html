@@ -1,0 +1,170 @@
+<html>
+
+<head>
+
+    <title>Google Maps Multiple Markers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div style='position: absolute;bottom: 0px; left: 0px; z-index: 10; height:30%; width:20%;background-color: grey;'>
+        <div class="row">
+            <p>
+                <label for="rent-price">Ціна за оренду:</label>
+                <input type="text" id="rent-price" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+        </div>
+        <div class="row" id="price-range"> </div>
+        <div class="row">
+            <p>
+                <label for="daysOnSite">Днів на сайті:</label>
+                <input type="text" id="daysOnSite" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            </p>
+        </div>
+        <div class="row" id="days-range"> </div>
+        <div class="row">
+            <p><button>Reload</button></p>
+        </div>
+    </div>
+
+    <div id="map" style="height: 100%; width: 100%;"></div>
+
+    <script type="text/javascript">
+        var map
+        var infowindow
+        var polygonObj
+        var polygonShape
+        var markers = []
+        var drawingManager
+
+        function setMapOnAll(map) {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(map);
+            }
+        }
+
+        function clearMarkers() {
+            setMapOnAll(null);
+            markers = [];
+        }
+
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13,
+                center: new google.maps.LatLng(49.83, 24.02),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+
+            drawingManager = new google.maps.drawing.DrawingManager({
+                drawingControl: true,
+                drawingControlOptions: {
+                    position: google.maps.ControlPosition.TOP_CENTER,
+                    drawingModes: ['polygon']
+                },
+            });
+            drawingManager.setMap(map);
+            infowindow = new google.maps.InfoWindow();
+
+            google.maps.event.addListener(drawingManager, 'polygoncomplete', function(polygon) {
+                if (polygonObj) {
+                    clearMarkers()
+                    polygonObj.setMap(null)
+                }
+                drawingManager.setOptions({
+                    drawingMode: null
+                });
+                polygonObj = polygon
+                polygonShape = new google.maps.Polygon({
+                    paths: polygon.getPaths()
+                });
+            });
+        }
+        $(document).ready(function() {
+            $("button").click(function() {
+                clearMarkers()
+                $.get("http://localhost:9980/get_apartments", function(data, status) {
+                    var marker, i;
+
+                    for (i in data) {
+                        var link = data[i].link;
+                        var coordinate = data[i].coordinate;
+                        Lat = parseFloat(coordinate.split(",")[0])
+                        Lng = parseFloat(coordinate.split(",")[1])
+                        var price = data[i].price
+                        var daysOnSite = data[i].daysOnSite
+                        markerLatLng = new google.maps.LatLng(Lat, Lng)
+                        var isInsidePoygon = google.maps.geometry.poly.containsLocation(markerLatLng, polygonShape)
+                        if (isInsidePoygon &&
+                            daysOnSite >= $("#days-range").slider("values", 0) &&
+                            daysOnSite <= $("#days-range").slider("values", 1) &&
+                            price >= $("#price-range").slider("values", 0) &&
+                            price <= $("#price-range").slider("values", 1)
+                        ) {
+                            marker = new google.maps.Marker({
+                                position: markerLatLng,
+                                map: map
+                            });
+                            markers.push(marker);
+                            google.maps.event.addListener(marker, 'mouseover', (function(marker, link) {
+                                return function() {
+                                    infowindow.setContent("<a href=" + link + ">url</a>");
+                                    infowindow.open(map, marker);
+                                }
+                            })(marker, link));
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=drawing&callback=initMap" type="text/javascript"></script>
+    <script>
+        $(function() {
+            $("#price-range").slider({
+                range: true,
+                min: 0,
+                max: 20000,
+                values: [3000, 5000],
+                slide: function(event, ui) {
+                    $("#rent-price").val("₴" + ui.values[0] + " - ₴" + ui.values[1]);
+                }
+            });
+
+            $("#rent-price").val("₴" + $("#price-range").slider("values", 0) +
+                " - ₴" + $("#price-range").slider("values", 1));
+        });
+    </script>
+    <script>
+        $(function() {
+            $("#days-range").slider({
+                range: true,
+                min: 0,
+                max: 100,
+                values: [0, 10],
+                slide: function(event, ui) {
+                    $("#daysOnSite").val(ui.values[0] + " - " + ui.values[1]);
+                }
+            });
+
+            $("#daysOnSite").val($("#days-range").slider("values", 0) +
+                " - " + $("#days-range").slider("values", 1));
+        });
+    </script>
+</body>
+
+</html>
