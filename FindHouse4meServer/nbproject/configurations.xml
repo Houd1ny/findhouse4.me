@@ -261,7 +261,7 @@
           <developmentMode>5</developmentMode>
           <standard>11</standard>
           <incDir>
-            <pElem>/home/yuriy/test/real_estate_parser/poco-dev/include</pElem>
+            <pElem>../poco-dev/include</pElem>
           </incDir>
         </ccTool>
         <fortranCompilerTool>
@@ -272,7 +272,7 @@
         </asmTool>
         <linkerTool>
           <linkerAddLib>
-            <pElem>/home/yuriy/test/real_estate_parser/poco-dev/lib</pElem>
+            <pElem>../poco-dev/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>PocoCrypto</linkerLibLibItem>
