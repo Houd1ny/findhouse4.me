@@ -75,57 +75,57 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver: ${OBJECTFILES}
 ${OBJECTDIR}/Source/ApartmentsController.o: Source/ApartmentsController.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsController.o Source/ApartmentsController.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsController.o Source/ApartmentsController.cpp
 
 ${OBJECTDIR}/Source/ApartmentsListRequestHandler.o: Source/ApartmentsListRequestHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsListRequestHandler.o Source/ApartmentsListRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsListRequestHandler.o Source/ApartmentsListRequestHandler.cpp
 
 ${OBJECTDIR}/Source/Appartment.o: Source/Appartment.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/Appartment.o Source/Appartment.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/Appartment.o Source/Appartment.cpp
 
 ${OBJECTDIR}/Source/FileRequestHandler.o: Source/FileRequestHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileRequestHandler.o Source/FileRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileRequestHandler.o Source/FileRequestHandler.cpp
 
 ${OBJECTDIR}/Source/FileSystem.o: Source/FileSystem.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileSystem.o Source/FileSystem.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileSystem.o Source/FileSystem.cpp
 
 ${OBJECTDIR}/Source/FindHouse4meServer.o: Source/FindHouse4meServer.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FindHouse4meServer.o Source/FindHouse4meServer.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FindHouse4meServer.o Source/FindHouse4meServer.cpp
 
 ${OBJECTDIR}/Source/ReportHandlerFactory.o: Source/ReportHandlerFactory.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ReportHandlerFactory.o Source/ReportHandlerFactory.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ReportHandlerFactory.o Source/ReportHandlerFactory.cpp
 
 ${OBJECTDIR}/Source/SearchPageController.o: Source/SearchPageController.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageController.o Source/SearchPageController.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageController.o Source/SearchPageController.cpp
 
 ${OBJECTDIR}/Source/SearchPageRequestHandler.o: Source/SearchPageRequestHandler.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageRequestHandler.o Source/SearchPageRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageRequestHandler.o Source/SearchPageRequestHandler.cpp
 
 ${OBJECTDIR}/Source/SqlLiteDb.o: Source/SqlLiteDb.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SqlLiteDb.o Source/SqlLiteDb.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SqlLiteDb.o Source/SqlLiteDb.cpp
 
 ${OBJECTDIR}/Source/main.o: Source/main.cpp
 	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/main.o Source/main.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/main.o Source/main.cpp
 
 # Subprojects
 .build-subprojects:
