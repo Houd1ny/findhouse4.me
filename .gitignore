@@ -1,0 +1,40 @@
+FindHouse4meServer/nbproject/private/
+FindHouse4meServer/build/
+FindHouse4meServer/nbbuild/
+FindHouse4meServer/dist/
+FindHouse4meServer/nbdist/
+FindHouse4meServer/.nb-gradle/
+
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
