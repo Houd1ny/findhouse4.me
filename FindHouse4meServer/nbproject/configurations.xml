@@ -73,7 +73,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source</Elem>
+    <Elem>Source</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

@@ -10,7 +10,7 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source</sourceRootElem>
+                <sourceRootElem>Source</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
