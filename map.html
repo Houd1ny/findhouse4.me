@@ -221,12 +221,11 @@
                 clearMarkers()
                 $.get("http://localhost:9980/get_apartments", function(data, status) {
                     var marker, i;
-
                     for (i in data) {
                         var link = data[i].link;
                         var coordinate = data[i].coordinate;
-                        Lat = parseFloat(coordinate.split(",")[0])
-                        Lng = parseFloat(coordinate.split(",")[1])
+                        Lat = parseFloat(coordinate.split(",")[0]) + (Math.random()-0.5)/300
+                        Lng = parseFloat(coordinate.split(",")[1]) + (Math.random()-0.5)/300
                         var price = data[i].price
                         var daysOnSite = data[i].daysOnSite
                         markerLatLng = new google.maps.LatLng(Lat, Lng)
