@@ -5,9 +5,11 @@
 
 #include "Poco/SharedPtr.h"
 #include "Poco/Util/ServerApplication.h"
-#include "AbstractApartmentsController.h"
+#include "IApartmentsController.h"
 #include "AbstractDB.h"
-#include "AbstractReportHandlerFactory.h"
+#include "AbstractRequestHandlerFactory.h"
+#include "AbstractFileSystem.h"
+#include "ISearchPageController.h"
 
 class FindHouse4meServer: public Poco::Util::ServerApplication
 {
@@ -26,9 +28,11 @@ protected:
     
     int main(const std::vector<std::string>& args);
 private:
-    Poco::SharedPtr<Business::AbstractApartmentsController> _abstractApartmentsController;
+    Poco::SharedPtr<Business::IApartmentsController> _abstractApartmentsController;
+    Poco::SharedPtr<Business::ISearchPageController> _searchPageController;
     Poco::SharedPtr<Data::AbstractDB> _abstractDB;
-    Poco::SharedPtr<Services::AbstractReportHandlerFactory> _abstractReportHandlerFactory;
+    Poco::SharedPtr<Services::AbstractRequestHandlerFactory> _abstractReportHandlerFactory;
+    Poco::SharedPtr<Data::AbstractFileSystem> _abstractFileSystem;
 };
 
 #endif /* FINDHOUSE4MESERVER_H */

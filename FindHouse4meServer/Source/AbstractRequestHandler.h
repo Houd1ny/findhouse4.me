@@ -6,11 +6,11 @@
 namespace Services
 {
     
-class AbstractReportHandler : public Poco::Net::HTTPRequestHandler{
+class AbstractRequestHandler : public Poco::Net::HTTPRequestHandler{
 public:
     virtual void handleRequest(Poco::Net::HTTPServerRequest& request, 
                                Poco::Net::HTTPServerResponse& response) = 0;
-    virtual ~AbstractReportHandler(){}
+    virtual ~AbstractRequestHandler(){}
 };
 
 }

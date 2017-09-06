@@ -12,7 +12,7 @@ using Poco::Net::HTTPServerResponse;
 using Poco::JSON::Array;
 using Poco::JSON::Object;
 
-Services::ApartmentsListRequestHandler::ApartmentsListRequestHandler(Poco::SharedPtr<Business::AbstractApartmentsController> controller)
+Services::ApartmentsListRequestHandler::ApartmentsListRequestHandler(Poco::SharedPtr<Business::IApartmentsController> controller)
     :_abstractApartmentsController(controller)
 {
 }

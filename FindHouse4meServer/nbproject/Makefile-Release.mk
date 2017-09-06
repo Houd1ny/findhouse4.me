@@ -38,8 +38,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/6bb45af9/ApartmentsController.o \
 	${OBJECTDIR}/_ext/6bb45af9/ApartmentsListRequestHandler.o \
 	${OBJECTDIR}/_ext/6bb45af9/Appartment.o \
+	${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o \
+	${OBJECTDIR}/_ext/6bb45af9/FileSystem.o \
 	${OBJECTDIR}/_ext/6bb45af9/FindHouse4meServer.o \
 	${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o \
+	${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o \
+	${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o \
 	${OBJECTDIR}/_ext/6bb45af9/SqlLiteDb.o \
 	${OBJECTDIR}/_ext/6bb45af9/main.o
 
@@ -83,6 +87,16 @@ ${OBJECTDIR}/_ext/6bb45af9/Appartment.o: /home/yuriy/test/findhouse4.me/FindHous
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/Appartment.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp
 
+${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp
+
+${OBJECTDIR}/_ext/6bb45af9/FileSystem.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/FileSystem.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp
+
 ${OBJECTDIR}/_ext/6bb45af9/FindHouse4meServer.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
 	${RM} "$@.d"
@@ -92,6 +106,16 @@ ${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o: /home/yuriy/test/findhouse4.m
 	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp
+
+${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp
+
+${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp
+	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/home/yuriy/test/real_estate_parser/poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp
 
 ${OBJECTDIR}/_ext/6bb45af9/SqlLiteDb.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp
 	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9

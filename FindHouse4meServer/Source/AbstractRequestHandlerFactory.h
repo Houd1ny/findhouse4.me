@@ -6,11 +6,11 @@
 namespace Services
 {
     
-class AbstractReportHandlerFactory : public Poco::Net::HTTPRequestHandlerFactory 
+class AbstractRequestHandlerFactory : public Poco::Net::HTTPRequestHandlerFactory 
 {
 public:
     virtual Poco::Net::HTTPRequestHandler* createRequestHandler(const Poco::Net::HTTPServerRequest& request) = 0;
-    virtual ~AbstractReportHandlerFactory(){}
+    virtual ~AbstractRequestHandlerFactory(){}
 };
 
 }

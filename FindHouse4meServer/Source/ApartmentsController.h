@@ -10,13 +10,13 @@
 #define APARTMENTSCONTROLLER_H
 
 #include "Poco/SharedPtr.h"
-#include "AbstractApartmentsController.h"
+#include "IApartmentsController.h"
 #include "AbstractDB.h"
 
 namespace Business 
 {
     
-class ApartmentsController : public AbstractApartmentsController
+class ApartmentsController : public IApartmentsController
 {
 public:
     ApartmentsController(Poco::SharedPtr<Data::AbstractDB> abstractDB);

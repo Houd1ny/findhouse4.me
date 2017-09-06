@@ -7,11 +7,11 @@
 namespace Business 
 {
     
-class AbstractApartmentsController 
+class IApartmentsController 
 {
 public:
     virtual std::vector<Data::Appartment> getAppartments() = 0;
-    virtual ~AbstractApartmentsController(){};
+    virtual ~IApartmentsController(){};
 };
 
 };

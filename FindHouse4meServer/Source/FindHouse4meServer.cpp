@@ -7,6 +7,8 @@
 #include "ApartmentsController.h"
 #include "ReportHandlerFactory.h"
 #include "SqlLiteDb.h"
+#include "FileSystem.h"
+#include "SearchPageController.h"
 
 using namespace std;
 
@@ -31,16 +33,23 @@ void FindHouse4meServer::initData()
             "/home/yuriy/test/real_estate_parser/appartments1.db");
     
     _abstractDB = new Data::SqlLiteDb(coonectionString);
+    
+    std::string frontendFolder = config().getString("Server.frontedFolder", 
+            "/home/yuriy/test/findhouse4.me/FindHouse4meServer/Frontend");
+    
+    _abstractFileSystem = new Data::FileSystem(frontendFolder);
 }
 
 void FindHouse4meServer::initBusiness() 
 {
+    _searchPageController = new Business::SearchPageController(_abstractFileSystem);
     _abstractApartmentsController = new Business::ApartmentsController(_abstractDB);
 }
 
 void FindHouse4meServer::initServices() 
 {
-    _abstractReportHandlerFactory = new Services::ReportHandlerFactory(_abstractApartmentsController);
+    _abstractReportHandlerFactory = 
+            new Services::ReportHandlerFactory(_abstractApartmentsController, _searchPageController);
 }
 
 
