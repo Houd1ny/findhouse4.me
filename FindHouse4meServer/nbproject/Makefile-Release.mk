@@ -35,17 +35,17 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/6bb45af9/ApartmentsController.o \
-	${OBJECTDIR}/_ext/6bb45af9/ApartmentsListRequestHandler.o \
-	${OBJECTDIR}/_ext/6bb45af9/Appartment.o \
-	${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o \
-	${OBJECTDIR}/_ext/6bb45af9/FileSystem.o \
-	${OBJECTDIR}/_ext/6bb45af9/FindHouse4meServer.o \
-	${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o \
-	${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o \
-	${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o \
-	${OBJECTDIR}/_ext/6bb45af9/SqlLiteDb.o \
-	${OBJECTDIR}/_ext/6bb45af9/main.o
+	${OBJECTDIR}/Source/ApartmentsController.o \
+	${OBJECTDIR}/Source/ApartmentsListRequestHandler.o \
+	${OBJECTDIR}/Source/Appartment.o \
+	${OBJECTDIR}/Source/FileRequestHandler.o \
+	${OBJECTDIR}/Source/FileSystem.o \
+	${OBJECTDIR}/Source/FindHouse4meServer.o \
+	${OBJECTDIR}/Source/ReportHandlerFactory.o \
+	${OBJECTDIR}/Source/SearchPageController.o \
+	${OBJECTDIR}/Source/SearchPageRequestHandler.o \
+	${OBJECTDIR}/Source/SqlLiteDb.o \
+	${OBJECTDIR}/Source/main.o
 
 
 # C Compiler Flags
@@ -72,60 +72,60 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/_ext/6bb45af9/ApartmentsController.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/ApartmentsController.o: Source/ApartmentsController.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/ApartmentsController.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsController.o Source/ApartmentsController.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/ApartmentsListRequestHandler.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/ApartmentsListRequestHandler.o: Source/ApartmentsListRequestHandler.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/ApartmentsListRequestHandler.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ApartmentsListRequestHandler.o Source/ApartmentsListRequestHandler.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/Appartment.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/Appartment.o: Source/Appartment.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/Appartment.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/Appartment.o Source/Appartment.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/FileRequestHandler.o: Source/FileRequestHandler.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/FileRequestHandler.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileRequestHandler.o Source/FileRequestHandler.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/FileSystem.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/FileSystem.o: Source/FileSystem.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/FileSystem.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FileSystem.o Source/FileSystem.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/FindHouse4meServer.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/FindHouse4meServer.o: Source/FindHouse4meServer.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/FindHouse4meServer.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/FindHouse4meServer.o Source/FindHouse4meServer.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/ReportHandlerFactory.o: Source/ReportHandlerFactory.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/ReportHandlerFactory.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/ReportHandlerFactory.o Source/ReportHandlerFactory.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/SearchPageController.o: Source/SearchPageController.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/SearchPageController.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageController.o Source/SearchPageController.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/SearchPageRequestHandler.o: Source/SearchPageRequestHandler.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/SearchPageRequestHandler.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SearchPageRequestHandler.o Source/SearchPageRequestHandler.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/SqlLiteDb.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/SqlLiteDb.o: Source/SqlLiteDb.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/SqlLiteDb.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/SqlLiteDb.o Source/SqlLiteDb.cpp
 
-${OBJECTDIR}/_ext/6bb45af9/main.o: /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/main.cpp
-	${MKDIR} -p ${OBJECTDIR}/_ext/6bb45af9
+${OBJECTDIR}/Source/main.o: Source/main.cpp
+	${MKDIR} -p ${OBJECTDIR}/Source
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/6bb45af9/main.o /home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/main.cpp
+	$(COMPILE.cc) -O2 -I../poco-dev/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Source/main.o Source/main.cpp
 
 # Subprojects
 .build-subprojects:

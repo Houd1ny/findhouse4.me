@@ -5,31 +5,31 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Business" projectFiles="true">
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/IApartmentsController.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ISearchPageController.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.h</itemPath>
+        <itemPath>Source/ApartmentsController.h</itemPath>
+        <itemPath>Source/IApartmentsController.h</itemPath>
+        <itemPath>Source/ISearchPageController.h</itemPath>
+        <itemPath>Source/SearchPageController.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Data" projectFiles="true">
         <logicalFolder name="f1" displayName="Entities" projectFiles="true">
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.h</itemPath>
+          <itemPath>Source/Appartment.h</itemPath>
         </logicalFolder>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractDB.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractFileSystem.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.h</itemPath>
+        <itemPath>Source/AbstractDB.h</itemPath>
+        <itemPath>Source/AbstractFileSystem.h</itemPath>
+        <itemPath>Source/FileSystem.h</itemPath>
+        <itemPath>Source/SqlLiteDb.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Services" projectFiles="true">
         <logicalFolder name="f1" displayName="ReportHandlers" projectFiles="true">
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.h</itemPath>
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.h</itemPath>
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.h</itemPath>
+          <itemPath>Source/ApartmentsListRequestHandler.h</itemPath>
+          <itemPath>Source/FileRequestHandler.h</itemPath>
+          <itemPath>Source/SearchPageRequestHandler.h</itemPath>
         </logicalFolder>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandler.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandlerFactory.h</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.h</itemPath>
+        <itemPath>Source/AbstractRequestHandler.h</itemPath>
+        <itemPath>Source/AbstractRequestHandlerFactory.h</itemPath>
+        <itemPath>Source/ReportHandlerFactory.h</itemPath>
       </logicalFolder>
-      <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.h</itemPath>
+      <itemPath>Source/FindHouse4meServer.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -39,26 +39,26 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f2" displayName="Business" projectFiles="true">
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.cpp</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp</itemPath>
+        <itemPath>Source/ApartmentsController.cpp</itemPath>
+        <itemPath>Source/SearchPageController.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="Data" projectFiles="true">
         <logicalFolder name="f1" displayName="Entities" projectFiles="true">
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp</itemPath>
+          <itemPath>Source/Appartment.cpp</itemPath>
         </logicalFolder>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp</itemPath>
+        <itemPath>Source/FileSystem.cpp</itemPath>
+        <itemPath>Source/SqlLiteDb.cpp</itemPath>
       </logicalFolder>
       <logicalFolder name="f1" displayName="Services" projectFiles="true">
         <logicalFolder name="f1" displayName="ReportHandlers" projectFiles="true">
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.cpp</itemPath>
-          <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp</itemPath>
+          <itemPath>Source/ApartmentsListRequestHandler.cpp</itemPath>
+          <itemPath>Source/FileRequestHandler.cpp</itemPath>
         </logicalFolder>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp</itemPath>
-        <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp</itemPath>
+        <itemPath>Source/ReportHandlerFactory.cpp</itemPath>
+        <itemPath>Source/SearchPageRequestHandler.cpp</itemPath>
       </logicalFolder>
-      <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp</itemPath>
-      <itemPath>/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/main.cpp</itemPath>
+      <itemPath>Source/FindHouse4meServer.cpp</itemPath>
+      <itemPath>Source/main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -111,137 +111,137 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractDB.h"
+      <item path="Source/AbstractDB.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractFileSystem.h"
+      <item path="Source/AbstractFileSystem.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandler.h"
+      <item path="Source/AbstractRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandlerFactory.h"
+      <item path="Source/AbstractRequestHandlerFactory.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.cpp"
+      <item path="Source/ApartmentsController.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.h"
+      <item path="Source/ApartmentsController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.cpp"
+      <item path="Source/ApartmentsListRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.h"
+      <item path="Source/ApartmentsListRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp"
+      <item path="Source/Appartment.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.h"
+      <item path="Source/Appartment.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp"
+      <item path="Source/FileRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.h"
+      <item path="Source/FileRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp"
+      <item path="Source/FileSystem.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.h"
+      <item path="Source/FileSystem.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp"
+      <item path="Source/FindHouse4meServer.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.h"
+      <item path="Source/FindHouse4meServer.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/IApartmentsController.h"
+      <item path="Source/IApartmentsController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ISearchPageController.h"
+      <item path="Source/ISearchPageController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp"
+      <item path="Source/ReportHandlerFactory.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.h"
+      <item path="Source/ReportHandlerFactory.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp"
+      <item path="Source/SearchPageController.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.h"
+      <item path="Source/SearchPageController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp"
+      <item path="Source/SearchPageRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.h"
+      <item path="Source/SearchPageRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp"
+      <item path="Source/SqlLiteDb.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.h"
+      <item path="Source/SqlLiteDb.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/main.cpp"
+      <item path="Source/main.cpp"
             ex="false"
             tool="1"
             flavor2="0">
@@ -288,137 +288,137 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractDB.h"
+      <item path="Source/AbstractDB.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractFileSystem.h"
+      <item path="Source/AbstractFileSystem.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandler.h"
+      <item path="Source/AbstractRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/AbstractRequestHandlerFactory.h"
+      <item path="Source/AbstractRequestHandlerFactory.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.cpp"
+      <item path="Source/ApartmentsController.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsController.h"
+      <item path="Source/ApartmentsController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.cpp"
+      <item path="Source/ApartmentsListRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ApartmentsListRequestHandler.h"
+      <item path="Source/ApartmentsListRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.cpp"
+      <item path="Source/Appartment.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/Appartment.h"
+      <item path="Source/Appartment.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.cpp"
+      <item path="Source/FileRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileRequestHandler.h"
+      <item path="Source/FileRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.cpp"
+      <item path="Source/FileSystem.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FileSystem.h"
+      <item path="Source/FileSystem.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.cpp"
+      <item path="Source/FindHouse4meServer.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/FindHouse4meServer.h"
+      <item path="Source/FindHouse4meServer.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/IApartmentsController.h"
+      <item path="Source/IApartmentsController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ISearchPageController.h"
+      <item path="Source/ISearchPageController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.cpp"
+      <item path="Source/ReportHandlerFactory.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/ReportHandlerFactory.h"
+      <item path="Source/ReportHandlerFactory.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.cpp"
+      <item path="Source/SearchPageController.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageController.h"
+      <item path="Source/SearchPageController.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.cpp"
+      <item path="Source/SearchPageRequestHandler.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SearchPageRequestHandler.h"
+      <item path="Source/SearchPageRequestHandler.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.cpp"
+      <item path="Source/SqlLiteDb.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/SqlLiteDb.h"
+      <item path="Source/SqlLiteDb.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/yuriy/test/findhouse4.me/FindHouse4meServer/Source/main.cpp"
+      <item path="Source/main.cpp"
             ex="false"
             tool="1"
             flavor2="0">
