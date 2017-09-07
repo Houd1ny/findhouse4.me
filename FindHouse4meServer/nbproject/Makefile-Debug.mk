@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-Linux
-CND_DLIB_EXT=so
+CND_PLATFORM=MinGW-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -62,13 +62,13 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/home/yuriy/test/real_estate_parser/poco-dev/lib -Wl,-rpath,'/home/yuriy/test/real_estate_parser/poco-dev/lib' -lPocoCryptod -lPocoDataSQLited -lPocoDatad -lPocoFoundationd -lPocoJSONd -lPocoNetSSLd -lPocoNetd -lPocoUtild -lPocoXMLd -lPocoZipd
+LDLIBSOPTIONS=-L/home/yuriy/test/real_estate_parser/poco-dev/lib -lPocoCryptod -lPocoDataSQLited -lPocoDatad -lPocoFoundationd -lPocoJSONd -lPocoNetSSLd -lPocoNetd -lPocoUtild -lPocoXMLd -lPocoZipd
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/findhouse4meserver ${OBJECTFILES} ${LDLIBSOPTIONS}
 

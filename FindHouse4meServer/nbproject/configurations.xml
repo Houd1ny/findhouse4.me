@@ -287,5 +287,114 @@
       <item path="Source/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
+    <conf name="Release_windows_" type="1">
+      <toolsSet>
+        <compilerSet>Cygwin|Cygwin</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <standard>8</standard>
+          <incDir>
+            <pElem>../poco-dev/include</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>../poco-dev/lib</pElem>
+          </linkerAddLib>
+          <linkerCopySharedLibs>true</linkerCopySharedLibs>
+          <linkerLibItems>
+            <linkerLibLibItem>PocoCrypto</linkerLibLibItem>
+            <linkerLibLibItem>PocoData</linkerLibLibItem>
+            <linkerLibLibItem>PocoDataSQLite</linkerLibLibItem>
+            <linkerLibLibItem>PocoFoundation</linkerLibLibItem>
+            <linkerLibLibItem>PocoJSON</linkerLibLibItem>
+            <linkerLibLibItem>PocoNet</linkerLibLibItem>
+            <linkerLibLibItem>PocoNetSSL</linkerLibLibItem>
+            <linkerLibLibItem>PocoUtil</linkerLibLibItem>
+            <linkerLibLibItem>PocoXML</linkerLibLibItem>
+            <linkerLibLibItem>PocoZip</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+      <item path="Source/AbstractDB.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/AbstractFileSystem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/AbstractRequestHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/AbstractRequestHandlerFactory.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Source/ApartmentsController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/ApartmentsController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/ApartmentsListRequestHandler.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Source/ApartmentsListRequestHandler.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="Source/Appartment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/Appartment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/FileRequestHandler.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/FileRequestHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/FileSystem.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/FileSystem.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/FindHouse4meServer.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/FindHouse4meServer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/IApartmentsController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/ISearchPageController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/ReportHandlerFactory.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/ReportHandlerFactory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/SearchPageController.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/SearchPageController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/SearchPageRequestHandler.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="Source/SearchPageRequestHandler.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/SqlLiteDb.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Source/SqlLiteDb.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Source/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
   </confs>
 </configurationDescriptor>

@@ -36,7 +36,7 @@ void FindHouse4meServer::initData()
     
     std::string frontendFolder = config().getString("Server.frontedFolder", 
             "/home/yuriy/test/findhouse4.me/FindHouse4meServer/Frontend");
-    
+        
     _abstractFileSystem = new Data::FileSystem(frontendFolder);
 }
 
@@ -65,7 +65,7 @@ void FindHouse4meServer::handleOption(const string& name, const string& value)
 
 int FindHouse4meServer::main(const std::vector<string>& args)
 {
-    unsigned short port = (unsigned short) config().getInt("HTTPTimeServer.port", 9980);
+    unsigned short port = (unsigned short) config().getInt("Server.port", 9980);
     int maxQueued  = config().getInt("Server.maxQueued", 100);
     int maxThreads = config().getInt("Server.maxThreads", 8);
     Poco::ThreadPool::defaultPool().addCapacity(maxThreads);
