@@ -38,3 +38,7 @@ FindHouse4meServer/.nb-gradle/
 *.exe
 *.out
 *.app
+
+#python
+.env
+.env/

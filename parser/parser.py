@@ -3,9 +3,8 @@
 import requests
 from bs4 import BeautifulSoup
 from lxml import etree
-from urllib import parse
-import time 
-import _pickle as cPickle
+from urllib import parse 
+import re
 
 def get_list_of_appartmens(html_tree):
     root_search_elem = html_tree.xpath('//*[@id="search_result"]')
@@ -13,8 +12,7 @@ def get_list_of_appartmens(html_tree):
     flat_list = [item for sublist in parsed_list for item in sublist]
     return flat_list
 
-import re
-import datetime
+
 
 def get_appartment_data(appart_link):
     r = requests.get(appart_link)
@@ -26,18 +24,19 @@ def get_appartment_data(appart_link):
     appartment_details = etree.tostring(appartment_details_node, encoding='utf-8').decode() 
     m = re.search(r'Ціна:\s*(.*?)\s*грн', appartment_details)
     price = int(m.group(1).replace(" ", "")) if m else 0
-    m = re.search(r'Оновлено:\s*(\d{2}.\d{2}.\d{4})', appartment_details)
-    lastUpdated = m.group(1) if m else "05.09.2017'"
+    m = re.search(r'\/(\d+)-', appart_link)
+    appart_id = int(m.group(1))
     m = re.search(r'Днів на сайті:\s(\d+)', appartment_details)
-    daysOnSite = int(m.group(1)) if m else 0
-    return (appart_link, coordinates, lastUpdated, price, daysOnSite)
+    days_on_site = int(m.group(1)) if m else 0
+    return {'appart_id': appart_id, 'appart_link': appart_link, 
+    'coordinates': coordinates, 'price': price, 'days_on_site':days_on_site}
 
 r = requests.get('https://www.real-estate.lviv.ua/orenda-kvartira/Lviv')
 html_tree = etree.HTML(r.text)
 count_of_pages = int(html_tree.xpath("//li[@class='last']/a")[0].text)
 
 all_pages_links = ["https://www.real-estate.lviv.ua/orenda-kvartira/Lviv/p_" + str(number) 
-                                                for number in range(1, count_of_pages)]
+                                                for number in range(1, 6)]
 
 def get_apparments_data_from_page(page_link):
     r = requests.get(page_link)
@@ -54,22 +53,35 @@ def get_apparments_data_from_page(page_link):
 
 
 from tqdm import tqdm
-import sqlite3
+import psycopg2
 
 def main():
-    conn = sqlite3.connect('appartments.db')
+    connect_str = "dbname='findhouse4.me' user='yuriy' host='localhost' password='alt+0160'"
+    conn = psycopg2.connect(connect_str)
     c = conn.cursor()
 
-    c.execute("DROP TABLE IF EXISTS Appartments")
-    c.execute("CREATE TABLE Appartments (link text, coordinates text, lastUpdated text, price int, daysOnSite int)")
+    c.execute("DROP TABLE IF EXISTS appartments_new")
+    c.execute("""CREATE TABLE appartments_new (appart_id integer PRIMARY KEY NOT NULL, appart_link text, 
+                                               coordinates text, price int, days_on_site int)""")
 
     for i in tqdm(range(0, len(all_pages_links))):
         page_link = all_pages_links[i]
         data = get_apparments_data_from_page(page_link)
-        for appart in data:
-            c.execute("INSERT INTO appartments VALUES ('{}','{}', '{}', {}, {})".
-                format(appart[0], appart[1], appart[2], appart[3], appart[4]))
+        for appartment in data:
+            c.execute("""
+                        INSERT INTO appartments_new VALUES ({appart_id}, '{appart_link}', '{coordinates}', {price}, {days_on_site})
+                        ON CONFLICT (appart_id) DO UPDATE 
+                            SET coordinates = excluded.coordinates, 
+                                price = excluded.price,
+                                days_on_site = excluded.days_on_site;
+                      """.format(**appartment))
             conn.commit()
+    
+    c.execute("ALTER TABLE appartments RENAME TO appartments_old")
+    c.execute("ALTER TABLE appartments_new RENAME TO appartments")
+    conn.commit()
+    c.execute("DROP TABLE IF EXISTS appartments_old")
+    conn.commit()
     conn.close()
 
 
