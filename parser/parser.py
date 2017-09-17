@@ -36,7 +36,7 @@ html_tree = etree.HTML(r.text)
 count_of_pages = int(html_tree.xpath("//li[@class='last']/a")[0].text)
 
 all_pages_links = ["https://www.real-estate.lviv.ua/orenda-kvartira/Lviv/p_" + str(number) 
-                                                for number in range(1, 6)]
+                                                for number in range(1, count_of_pages+1)]
 
 def get_apparments_data_from_page(page_link):
     r = requests.get(page_link)
@@ -54,9 +54,15 @@ def get_apparments_data_from_page(page_link):
 
 from tqdm import tqdm
 import psycopg2
+import configparser
 
 def main():
-    connect_str = "dbname='findhouse4.me' user='yuriy' host='localhost' password='alt+0160'"
+    config = configparser.ConfigParser()
+    config.read("parser_config")
+    password = config['findhouse4.me']['password']
+    user = config['findhouse4.me']['user']
+    dbname = config['findhouse4.me']['dbname']
+    connect_str = "dbname='{}' user='{}' host='localhost' password='{}'".format(dbname, user, password)
     conn = psycopg2.connect(connect_str)
     c = conn.cursor()
 
